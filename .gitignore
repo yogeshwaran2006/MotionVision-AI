@@ -1,0 +1,26 @@
+﻿# Python cache
+__pycache__/
+*.py[cod]
+*.class
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+
+# Heavy video files & outputs (prevent GitHub 100MB limit errors)
+*.mp4
+*.avi
+*.mov
+
+# Heavy YOLO weights (auto-downloaded at runtime by Ultralytics)
+yolo11x.pt
+yolo11l.pt
+yolo11m.pt
+yolov8s.pt
+
+# Temporary / local files
+*.log
+.DS_Store
+Thumbs.db

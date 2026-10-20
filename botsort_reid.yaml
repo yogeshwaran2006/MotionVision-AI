@@ -1,0 +1,21 @@
+# MotionVision AI — BoT-SORT tracker configuration with ReID enabled.
+# This is a COPY of the Ultralytics botsort.yaml default with ReID turned ON.
+# Use this for better ID stability at the cost of slightly lower FPS.
+# Usage:  python run_tracking.py video.mp4 --tracker botsort_reid.yaml
+
+tracker_type: botsort
+track_high_thresh: 0.25
+track_low_thresh: 0.1
+new_track_thresh: 0.25
+track_buffer: 30
+match_thresh: 0.8
+fuse_score: True
+
+# BoT-SORT specifics
+gmc_method: sparseOptFlow   # global motion compensation — helps with moving cameras
+
+# ReID (re-identification) — ENABLED for better ID stability after occlusion
+proximity_thresh: 0.5
+appearance_thresh: 0.25     # lowered from 0.8 to allow more appearance matches
+with_reid: True             # ← the key difference from default botsort.yaml
+model: auto                 # uses detector features; no extra model file needed

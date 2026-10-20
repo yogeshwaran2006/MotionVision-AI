@@ -1,0 +1,1 @@
+python run_tracking.py 1 --model yolo11x.pt --conf 0.35 --tracker bytetrack.yaml
